@@ -2,11 +2,6 @@
     "name": "yehua/easyswoole-think",
     "type": "library",
     "description": "An efficient swoole framework",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0"
-        }
-    },
     "keywords": [
         "swoole",
         "framework",
