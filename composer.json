@@ -2,6 +2,7 @@
     "name": "yehua/easyswoole-think",
     "type": "library",
     "description": "An efficient swoole framework",
+    "version": "1.0",
     "keywords": [
         "swoole",
         "framework",
