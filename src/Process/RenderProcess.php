@@ -5,6 +5,7 @@ use EasySwoole\Component\Process\Socket\AbstractUnixProcess;
 use EasySwoole\Template\Think\Socket\Protocol;
 use EasySwoole\Template\Think\ThinkEngine;
 use Swoole\Coroutine\Socket;
+use Swoole\Process;
 
 
 class RenderProcess extends AbstractUnixProcess
