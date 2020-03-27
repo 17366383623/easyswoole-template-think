@@ -43,7 +43,7 @@ class Render
     {
         $this->setConfig($config, $options);
         $this->setThinkConfig($options);
-        $server = $server?:ServerManager::getInstance();
+        $server = $server?:ServerManager::getInstance()->getSwooleServer();
         $this->attachRenderServer($server);
         return $this;
     }
@@ -57,13 +57,6 @@ class Render
      */
     public function setThinkConfig(array $options): void
     {
-        $config = $this->config;
-        if(!$config->getViewPath() || !$config->getCachePath()) {
-            throw new RenderException('default view path or cache path is missing');
-        }
-        $options['view_path'] = $config->getViewPath();
-        $options['cache_path'] = $config->getCachePath();
-        $options['view_suffix'] = array_key_exists('view_suffix',$options)?$options['view_suffix']:'html';
         $this->thinkConfig = $options;
     }
 

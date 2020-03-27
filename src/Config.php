@@ -5,12 +5,6 @@ namespace EasySwoole\Template\Think;
 
 class Config
 {
-    /** @var string path */
-    private $view_path;
-
-    /** @var string path */
-    private $cache_path;
-
     /** @var int timeout */
     private $timeout = 0.5;
 
@@ -19,27 +13,6 @@ class Config
 
     /** @var string renderProcessNamePrefix */
     private $socketPrefix = 'render';
-
-
-    /**
-     * get view path
-     *
-     * @return string
-     */
-    public function getViewPath(): string
-    {
-        return $this->view_path;
-    }
-
-    /**
-     * get cache path
-     *
-     * @return string |null
-     */
-    public function getCachePath(): ?string
-    {
-        return $this->cache_path;
-    }
 
     /**
      * get timeout
@@ -69,34 +42,6 @@ class Config
     public function getSocketPrefix(): string
     {
         return $this->socketPrefix;
-    }
-
-    /**
-     * set view path
-     *
-     * @param string $path
-     */
-    public function setViewPath(string $path): void
-    {
-        if(substr($path, -1, 1) !== '/'){
-            $this->view_path = $path.'/';
-            return;
-        }
-        $this->view_path = $path;
-    }
-
-    /**
-     * set cache path
-     *
-     * @param string $path
-     */
-    public function setCachePath(string $path): void
-    {
-        if(substr($path, -1, 1) !== '/'){
-            $this->cache_path = $path.'/';
-            return;
-        }
-        $this->cache_path = $path;
     }
 
     /**
