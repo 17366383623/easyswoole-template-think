@@ -1,5 +1,10 @@
 # EasySwoole-Template-Think
 
+## 扩展安装
+```bash
+composer require yehua/easyswoole-think
+```
+
 ## 实现原理
 注册N个自定义进程做渲染进程，进程内关闭协程环境，并监听UNIXSOCK，客户端调用携程的client客户端发送数据给进程渲染，进程再返回结果给客户端，用来解决PHP模板引擎协程安全问题。
 
