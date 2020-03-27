@@ -54,8 +54,8 @@ public static function mainServerCreate(EventRegister $register)
     $config = new \EasySwoole\Template\Think\Config();
     // 设置全局socket基础配置（不可修改）和 think-template全局配置(think配置见https://github.com/top-think/think-template)
     \EasySwoole\Template\Think\Render::getInstance()->init($config, [
-        'view_path'	=>	'./views/',
-        'cache_path'	=>	'./views/cache/',
+        'view_path'	=>	EASYSWOOLE_ROOT.'/Template/',
+        'cache_path'	=>	EASYSWOOLE_ROOT.'/Template/Cache/',
         'view_suffix'   =>	'html'
     ]);
 }
