@@ -1,5 +1,5 @@
 {
-    "name": "easyswoole/think",
+    "name": "yehua/easyswoole-think",
     "type": "library",
     "description": "An efficient swoole framework",
     "keywords": [
